@@ -56,6 +56,8 @@ class RegisterScreen extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: 'Email/Phone Number',
+                prefixIcon: Icon(Icons.email), // Icon for email/phone number
+                border: OutlineInputBorder(), // Border for all sides
               ),
             ),
             SizedBox(height: 20),
@@ -64,6 +66,8 @@ class RegisterScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
+                prefixIcon: Icon(Icons.lock), // Icon for password
+                border: OutlineInputBorder(), // Border for all sides
               ),
             ),
             SizedBox(height: 20),
