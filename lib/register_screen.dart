@@ -67,7 +67,7 @@ class RegisterScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: 'Password',
                 prefixIcon: Icon(Icons.lock), // Icon for password
-                border: OutlineInputBorder(), // Border for all sides
+                border: OutlineInputBorder(), // Full border for all sides
               ),
             ),
             SizedBox(height: 20),
