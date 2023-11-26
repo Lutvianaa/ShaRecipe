@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                 },
                 child: Text('OK'),
                 style: TextButton.styleFrom(
-                  primary: Colors.deepOrange, // Set text color to deepOrange
+                  foregroundColor: Colors.brown, // Set text color to brown
                 ),
               ),
             ],
@@ -40,20 +40,25 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-        backgroundColor: const Color(0xFFFFE4C4),
-      ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset(
+              'assets/ShaRecipe.png', // Replace with your logo asset path
+              width: 100,
+              height: 100,
+              // Adjust width and height as needed
+            ),
+            SizedBox(height: 20),
             TextField(
               controller: emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: 'Email/Phone Number',
+                prefixIcon: Icon(Icons.email), // Icon for email/phone number
+                border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 20),
@@ -62,6 +67,8 @@ class LoginScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
+                prefixIcon: Icon(Icons.lock), // Icon for password
+                border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 20),
@@ -69,7 +76,7 @@ class LoginScreen extends StatelessWidget {
               onPressed: () => _login(context),
               child: Text('Login'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFFFE4C4),
+                backgroundColor: Colors.brown,
               ),
             ),
             SizedBox(height: 10),
@@ -83,7 +90,7 @@ class LoginScreen extends StatelessWidget {
               child: Text(
                 'Don\'t have an account? Register',
                 style: TextStyle(
-                  backgroundColor: Colors.white,
+                  color: Colors.brown,
                 ),
               ),
             ),

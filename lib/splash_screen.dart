@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'register_screen.dart'; // Import your register screen file
+import 'login_screen.dart'; // Import your register screen file
 
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Delay for 3 seconds and then navigate to Register Screen
+    // Delay for 3 seconds and then navigate to Login Screen
     Future.delayed(Duration(seconds: 3), () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => RegisterScreen()), // Replace with your RegisterScreen
+        MaterialPageRoute(builder: (context) => LoginScreen()), // Replace with your LoginScreen
       );
     });
     return Scaffold(

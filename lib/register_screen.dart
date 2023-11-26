@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'personalization_screen.dart'; // Import your personalization screen
 import 'login_screen.dart'; // Import your login screen
+import 'dashboard_screen.dart'; // Import your dashboard screen
 
 class RegisterScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -8,9 +8,12 @@ class RegisterScreen extends StatelessWidget {
 
   void _register(BuildContext context) {
     if (emailController.text.isNotEmpty && passwordController.text.isNotEmpty) {
-      Navigator.push(
+      // Di sini Anda bisa menambahkan logika untuk menyimpan informasi pengguna atau melakukan proses lain yang diperlukan setelah pendaftaran.
+
+      // Arahkan langsung ke halaman Dashboard setelah pendaftaran berhasil.
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => PersonalizationScreen()),
+        MaterialPageRoute(builder: (context) => DashboardScreen()), // Ganti dengan halaman dashboard yang sesuai
       );
     } else {
       showDialog(
@@ -26,7 +29,7 @@ class RegisterScreen extends StatelessWidget {
                 },
                 child: Text('OK'),
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.brown, // Set text color to deepOrange
+                  foregroundColor: Colors.brown,
                 ),
               ),
             ],
