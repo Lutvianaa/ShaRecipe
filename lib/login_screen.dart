@@ -6,35 +6,45 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  // void _login(BuildContext context) {
+  //   if (emailController.text.isNotEmpty &&
+  //       passwordController.text.isNotEmpty) {
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => DashboardScreen()),
+  //     );
+  //   } else {
+  //     showDialog(
+  //       context: context,
+  //       builder: (BuildContext context) {
+  //         return AlertDialog(
+  //           title: Text('Error'),
+  //           content: Text('Please enter valid credentials.'),
+  //           actions: <Widget>[
+  //             TextButton(
+  //               onPressed: () {
+  //                 Navigator.of(context).pop();
+  //               },
+  //               child: Text('OK'),
+  //               style: TextButton.styleFrom(
+  //                 foregroundColor: Colors.brown, // Set text color to brown
+  //               ),
+  //             ),
+  //           ],
+  //         );
+  //       },
+  //     );
+  //   }
+  // }
+
   void _login(BuildContext context) {
-    if (emailController.text.isNotEmpty &&
-        passwordController.text.isNotEmpty) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => DashboardScreen()),
-      );
-    } else {
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Error'),
-            content: Text('Please enter valid credentials.'),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text('OK'),
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.brown, // Set text color to brown
-                ),
-              ),
-            ],
-          );
-        },
-      );
-    }
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => DashboardScreen()),
+    );
+
+    // Tambahkan validasi di sini jika diperlukan
+    // Pastikan untuk menangani validasi input di halaman DashboardScreen juga
   }
 
   @override
